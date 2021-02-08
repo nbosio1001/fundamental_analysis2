@@ -1,0 +1,5 @@
+flaskr.egg-info/
+.vscode/
+MANIFEST.in
+instance/
+venv/

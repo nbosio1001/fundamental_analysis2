@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}New Post{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="ticker_symbol">Title</label>
+    <input name="ticker_symbol" id="ticker_symbol" value="{{ request.form['ticker_symbol'] }}" required>
+    <!-- <label for="body">Body</label>
+    <textarea name="body" id="body">{{ request.form['body'] }}</textarea> -->
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
