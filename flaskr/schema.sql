@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS user;
-DROP TABLE IF EXISTS ticker_symbols;
+DROP TABLE IF EXISTS post;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -7,10 +7,11 @@ CREATE TABLE user (
   password TEXT NOT NULL
 );
 
-CREATE TABLE ticker_symbols (
+CREATE TABLE post (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   author_id INTEGER NOT NULL,
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  ticker_symbol VARCHAR (10),
+  ticker_symbol TEXT NOT NULL,
+  body TEXT NOT NULL,
   company_name VARCHAR(255)
 );

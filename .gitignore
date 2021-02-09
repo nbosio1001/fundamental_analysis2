@@ -1,5 +1,13 @@
-flaskr.egg-info/
+*.egg-info/
 .vscode/
 MANIFEST.in
 instance/
 venv/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.pyc

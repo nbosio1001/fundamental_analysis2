@@ -11,18 +11,19 @@ bp = Blueprint('company_list', __name__)
 @bp.route('/')
 def index():
     db = get_db()
-    ticker_symbols = db.execute(
-        'SELECT t.id, ticker_symbol, created'
-        ' FROM ticker_symbols t JOIN user u on t.author_id = u.id'
+    posts = db.execute(
+        'SELECT p.id, ticker_symbol, body, created, author_id, username'
+        ' FROM post p JOIN user u on p.author_id = u.id'
         ' ORDER BY created DESC'
     ).fetchall()
-    return render_template('company_list/index.html', ticker_symbols=ticker_symbols)
+    return render_template('company_list/index.html', posts=posts)
 
 @bp.route('/create', methods=('GET', 'POST'))
 @login_required
 def create():
     if request.method == 'POST':
         ticker_symbol = request.form['ticker_symbol']
+        body = request.form['body']
         error = None
 
         if not ticker_symbol:
@@ -33,9 +34,9 @@ def create():
         else:
             db = get_db()
             db.execute(
-                'INSERT INTO ticker_symbols (ticker_symbol, author_id)'
-                ' VALUES (?, ?)',
-                (ticker_symbol,g.user['id'],)
+                'INSERT INTO post (ticker_symbol, body, author_id)'
+                ' VALUES (?, ?, ?)',
+                (ticker_symbol, body, g.user['id'])
             )
             db.commit()
             return redirect(url_for('company_list.index'))
@@ -44,9 +45,9 @@ def create():
 
 def get_post(id, check_author=True):
     post = get_db().execute(
-        'SELECT t.ticker_symbol, created, author_id'
-        ' FROM ticker_symbols t JOIN user u ON author_id = u.id'
-        ' WHERE t.id = ?',
+        'SELECT p.id, ticker_symbol, body, created, author_id, username'
+        ' FROM post p JOIN user u ON p.author_id = u.id'
+        ' WHERE p.id = ?',
         (id,)
     ).fetchone()
 
@@ -61,10 +62,11 @@ def get_post(id, check_author=True):
 @bp.route('/<int:id>/update', methods=('GET', 'POST'))
 @login_required
 def update(id):
-    ticker_symbols = get_post(id)
+    post = get_post(id)
 
     if request.method == 'POST':
         ticker_symbol = request.form['ticker_symbol']
+        body = request.form['body']
         error = None
 
         if not ticker_symbol:
@@ -75,14 +77,14 @@ def update(id):
         else:
             db = get_db()
             db.execute(
-                'UPDATE ticker_symbols SET ticker_symbol = ?'
+                'UPDATE post SET ticker_symbol = ?, body = ?'
                 ' WHERE id = ?',
-                (ticker_symbol, id)
+                (ticker_symbol, body, id)
             )
             db.commit()
             return redirect(url_for('company_list.index'))
 
-    return render_template('company_list/update.html', ticker_symbols=ticker_symbols)
+    return render_template('company_list/update.html', post=post)
 
 @bp.route('/<int:id>/delete', methods=('POST',))
 @login_required
