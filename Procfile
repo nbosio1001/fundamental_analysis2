@@ -1,1 +1,1 @@
-web: gunicorn flaskr.wsgi --log-file -
+web: guincorn "flaskr:create_app()"
