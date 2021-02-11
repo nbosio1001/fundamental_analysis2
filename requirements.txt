@@ -2,7 +2,7 @@ attrs==20.3.0
 click==7.1.2
 coverage==5.4
 Flask==1.1.2
--e git+https://github.com/nbosio1001/fundamental_analysis2.git@02d206095b5670a0346b060772665c8f7f928c36#egg=flaskr
+# -e git+https://github.com/nbosio1001/fundamental_analysis2.git@02d206095b5670a0346b060772665c8f7f928c36#egg=flaskr
 gunicorn==20.0.4
 importlib-metadata==3.4.0
 iniconfig==1.1.1
