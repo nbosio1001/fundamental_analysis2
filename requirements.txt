@@ -2,7 +2,8 @@ attrs==20.3.0
 click==7.1.2
 coverage==5.4
 Flask==1.1.2
-# -e git+https://github.com/nbosio1001/fundamental_analysis2.git@b1d33575e0d32e40b288522adc72a546441da1e2#egg=flaskr
+Flask-SQLAlchemy==2.4.4
+-e git+https://github.com/nbosio1001/fundamental_analysis2.git@87d206671fbc307d3fb24e8ccff8c4cb187fa5c4#egg=flaskr
 gunicorn==20.0.4
 importlib-metadata==3.4.0
 iniconfig==1.1.1
@@ -15,6 +16,7 @@ psycopg2==2.8.6
 py==1.10.0
 pyparsing==2.4.7
 pytest==6.2.2
+SQLAlchemy==1.3.23
 toml==0.10.2
 typing-extensions==3.7.4.3
 waitress==1.4.4
