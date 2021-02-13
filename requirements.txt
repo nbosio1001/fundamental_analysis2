@@ -2,7 +2,7 @@ attrs==20.3.0
 click==7.1.2
 coverage==5.4
 Flask==1.1.2
--e git+https://github.com/nbosio1001/fundamental_analysis2.git@9d068d35a7fb6be51acd80470283299139e8d7e4#egg=flaskr
+-e git+https://github.com/nbosio1001/fundamental_analysis2.git@b1d33575e0d32e40b288522adc72a546441da1e2#egg=flaskr
 gunicorn==20.0.4
 importlib-metadata==3.4.0
 iniconfig==1.1.1
@@ -11,6 +11,7 @@ Jinja2==2.11.3
 MarkupSafe==1.1.1
 packaging==20.9
 pluggy==0.13.1
+psycopg2==2.8.6
 py==1.10.0
 pyparsing==2.4.7
 pytest==6.2.2
