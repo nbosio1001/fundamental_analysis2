@@ -7,7 +7,12 @@ venv/
 .pytest_cache/
 .coverage
 htmlcov/
+__pycache__
 
 dist/
 build/
 *.pyc
+
+flaskr/db_sqlalchemy.py
+flaskr/models.py
+flaskr/sqlalchemy/
