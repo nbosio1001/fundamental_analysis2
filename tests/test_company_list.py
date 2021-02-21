@@ -63,7 +63,7 @@ def test_create(client, auth, app):
 def test_update(client, auth, app):
     # auth.login()
     assert client.get('/1/update').status_code == 200
-    client.post('/1/update', data={'ticker_symbol': 'updated', 'body': ''})
+    client.post('/1/update', data={'ticker_symbol': 'updated'})#, 'body': ''})
 
     with app.app_context():
         db = get_db()
@@ -77,7 +77,7 @@ def test_update(client, auth, app):
 ))
 def test_create_update_validate(client, auth, path):
     auth.login()
-    response = client.post(path, data={'ticker_symbol': '', 'body': ''})
+    response = client.post(path, data={'ticker_symbol': ''})#, 'body': ''})
     assert b'Ticker symbol is required.' in response.data
 
 def test_delete(client, auth, app):
