@@ -15,14 +15,14 @@ from flaskr.db import get_db
 #     # assert b'test\nbody' in response.data
 #     assert b'href="/1/update"' in response.data
 
-@pytest.mark.parametrize('path', (
-    '/create',
-    '/1/update',
-    '/1/delete',
-))
-def test_login_required(client, path):
-    response = client.post(path)
-    assert response.headers['Location'] == 'http://localhost/auth/login'
+# @pytest.mark.parametrize('path', (
+#     '/create',
+#     '/1/update',
+#     '/1/delete',
+# ))
+# def test_login_required(client, path):
+#     response = client.post(path)
+#     assert response.headers['Location'] == 'http://localhost/auth/login'
 
 
 # def test_author_required(app, client):#, auth):
