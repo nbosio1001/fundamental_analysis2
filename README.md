@@ -10,3 +10,8 @@ Runs on Heroku, but there is a issue with the database. Heroku does not support 
 
 ## Designing Webscraper based on PageObject Design Pattern
 https://selenium-python.readthedocs.io/page-objects.html
+
+
+# Refactory Branch
+This branch is created to match the code from the Selenium PageObjects design pattern. I did not understand how the PageObject design pattern worked before.
+This is an experiment on getting it to work.
