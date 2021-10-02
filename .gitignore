@@ -16,3 +16,10 @@ build/
 flaskr/db_sqlalchemy.py
 flaskr/models.py
 flaskr/sqlalchemy/
+2021q2/
+.ipynb_checkpoints/
+testing_sub_file.py
+testing_sub_file.ipynb
+window_popup_screenshot.odt
+geckodriver.log
+Untitled.ipynb
