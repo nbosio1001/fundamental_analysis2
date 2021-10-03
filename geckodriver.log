@@ -1,0 +1,27 @@
+1633133504982	geckodriver	INFO	Listening on 127.0.0.1:54403
+1633133504989	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileVPxaBa"
+*** You are running in headless mode.
+1633133505582	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVPxaBa/search.json.mozlz4", (void 0)))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 154: TypeError: date is undefined
+1633133506914	Marionette	INFO	Listening on port 39037
+1633133507014	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1633193951475	geckodriver	INFO	Listening on 127.0.0.1:40133
+1633193951484	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofilerADlSr"
+*** You are running in headless mode.
+1633193952093	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerADlSr/search.json.mozlz4", (void 0)))
+console.info: MINT: Loading search-config defaults.
+1633193953270	Marionette	INFO	Listening on port 45209
+1633193953320	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 154: TypeError: date is undefined
+console.info: MINT: main/search-config update being skipped
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
